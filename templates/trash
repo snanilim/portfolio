@@ -1,0 +1,24 @@
+{% extends "Basemodel.html" %}
+
+
+{% block content %}
+
+<div class="row" style="padding-left: 27%;">
+    <div class="rounded float-left">
+        <img src="{{ url_for('static', path='/images/Face3.gif') }}"  alt="..." style="width: 400px;">
+    </div>
+    <div class="rounded float-right">
+        <img src="{{ url_for('static', path='/images/Face3.gif') }}" alt="..." style="width: 400px;">
+    </div>
+
+    <form action="/files/" enctype="multipart/form-data" method="POST">
+        
+        <input name="files" type="file" multiple>
+        <input name="files" type="file" multiple>
+        <input type="submit">
+    </form>
+
+                
+                
+</div>
+{% endblock %}

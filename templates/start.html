@@ -1,0 +1,36 @@
+<html>
+        <head dir="rtl">
+            <title>It is a test</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+            <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}" rel="stylesheet">
+            
+        </head>
+        <body>
+            <ul class="ltr">
+                <h3>Creative</h3>
+                <h3>Front runner</h3>
+                <h3>Pacesetter</h3>
+                A Creative, pacesetter programmer who have .. experience on ..<br><br>
+                <hr>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+
+            </ul>
+            <hr>
+
+            <div class="image">
+                  <img src="{{ url_for('static', path='/images/FaceRecognition.gif') }}" alt="Face Recognition" height="250" width="250">
+                <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="image">
+                <a target="_blank" href="/images/FaceDetection.jpg">
+                  <img src="{{ url_for('static', path='/images/FaceDetection.jpg') }}" alt="FaceDetection">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        </body>
+    </html>

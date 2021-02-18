@@ -1,0 +1,57 @@
+{% extends "basemodel.html" %}
+
+
+{% block content %}
+
+<div>
+    <div class="well well-lg" style=" border-bottom: 1px solid lightgrey; width: 100%;margin-bottom: 2%;">
+        <h2 style="text-align: center; padding: 2%;">About</h2>
+        <p></p>
+    </div>
+    <div class="row" style="margin-top: 5%;">
+        <div class="col_6" style="display: inline-block; width: 40%; height: 40%;  margin-left: 10%; margin-top: 5%;">
+            <div style="display: inline-block; width: 30%; background-color:lightsteelblue;" class="rounded">
+               <p style="text-align: center; margin-block: 5%;">Hello I'M</p>
+            </div>
+            <h2>SNA Nilim</h2>
+            <h5>Machine Learning Engineer</h5>
+            <img style="display: inline-block; width: 5%; height: 5%;" src="{{ url_for('static', path='/images/gmailicon2.png') }}" alt="Sheba technology logo" >
+            www.gmail.com
+            <br>
+            <img style="display: inline-block; width: 5%; height: 5%;" src="{{ url_for('static', path='/images/phoneicon.png') }}" alt="Sheba technology logo" >
+            +880100000000
+            <br>
+            <img style="display: inline-block; width: 5%; height: 5%;" src="{{ url_for('static', path='/images/locationicon.png') }}" alt="Sheba technology logo" >
+            Sheba Technologies Ltd
+        </div>
+        <div class="col_6 rounded-circle" style="display: inline-block; width: 30%; height: 30%; box-shadow:20px 20px 50px 15px grey">
+                
+                <img src="{{ url_for('static', path='/images/personicon.gif') }}" alt="person" style="width: 100%;">
+        </div>
+    </div>
+    
+
+    <div class="row" style="margin-top: 10%; margin-left: 10%; margin-bottom: 10%;">
+        <div class="col_6" style="display: inline-block; width: 30%; height: 30%; margin-left: 5%; border: 0px lightgrey solid">
+                
+            <img src="{{ url_for('static', path='/images/programmer.png') }}" alt="person" style="width: 100%;">
+        </div>
+        <div class="col_6" style="display: inline-block; width: 40%; height: 40%;  margin-left: 10%; margin-top: 5%;">
+            <div style="display: inline-block;" class="rounded">
+               <h4 style="text-align: center;">About Me</h4>
+            </div>
+            
+            <p>
+                More description will be added
+            </p>
+        </div>
+        
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}

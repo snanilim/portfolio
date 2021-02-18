@@ -1,0 +1,42 @@
+{% extends "basemodel.html" %}
+
+
+{% block content %}
+
+<div class="row" style="padding-left: 30%;">
+
+    <form action="/files/" enctype="multipart/form-data" method="POST">
+        <div class="row">
+            <div class="card" style="width:40%;">
+                <img class="card-img-top" src="{{ url_for('static', path='/images/Face3.gif') }}" alt="Card image" style="width:100%;">
+                <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">First Picture</h4>
+                    <p class="card-text">Please insert your first picture</p>
+                    <input name="files" type="file" multiple>
+                </div>
+            </div>
+            <div style="padding-top: 20%; width: 15%;" >
+                <h5 style="padding: 20%;">  Match between  </h5>
+            </div>
+            <div class="card" style="width:40%;">
+                <img class="card-img-top" src="{{ url_for('static', path='/images/Face3.gif') }}" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">Second Picture</h4>
+                    <p class="card-text">Please insert your second picture</p>
+                    <input name="files" type="file" multiple>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col_sm_3" style="width: 100%;">
+                <button class="btn btn-primary btn-block"  type="submit">Match</button>
+            </div>
+        </div>
+    </form>
+
+                
+                
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "basemodel.html" %}
+
+
+{% block content %}
+
+<div>
+    <div class="well well-lg" style=" border-bottom: 1px solid lightgrey; width: 100%;margin-bottom: 2%;">
+        <h2 style="text-align: center; padding: 2%;">Projects</h2>
+        <p></p>
+    </div>
+
+    <div data-masonry='{"percentPosition": true }' style="margin-inline: 1%;">
+        <div class="card col-sm-4" style="width:30%; margin-inline: 1%; margin-bottom: 2%;border-style: solid; border-color:slategray; background-color:snow;">
+            <img class="card-img-top" src="{{ url_for('static', path='/images/FaceRecognition.gif') }}" alt="Card image" style="width:100%;height: 80%;">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Face Recognition</h4>
+                <p class="card-text">description will be added</p>
+                <a href="FaceRecognition" class="btn btn-primary">Project Details</a>
+            </div>
+        </div>
+        <div class="card col-sm-4" style="width:30%; margin-inline: 1%; margin-bottom: 2%;border-style: solid; border-color:slategray;background-color:oldlace">
+            <img class="card-img-down" src="{{ url_for('static', path='/images/OCR2.gif') }}" alt="Card image" style="width:100%;height: 52%;">
+            <hr>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Optical Character Recognition</h4>
+                <p class="card-text">description will be added</p>
+                <a href="OCR" class="btn btn-primary">Project Details</a>
+            </div>
+        </div>
+    
+        <div class="card col-sm-4" style="width:30%; margin-inline: 1%; margin-bottom: 2%; border-style: solid; border-color:slategray;background-color:mintcream;">
+            <img class="card-img-down" src="{{ url_for('static', path='/images/ML.gif') }}" alt="Card image" style="width:100%;height: 52%;">
+            <hr>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Face Recognition 2</h4>
+                <p class="card-text">description will be added</p>
+                <a href="FaceRecognition" class="btn btn-primary">Project Details</a>
+            </div>
+        </div>
+    
+        <div class="card col-sm-6" style="width:30%; margin-inline: 1%;margin-bottom: 2%;border-style: solid; border-color:slategray;background-color:linen">
+            <img class="card-img-down" src="{{ url_for('static', path='/images/ML2.gif') }}" alt="Card image" style="width:100%;height: 52%;">
+            <hr>
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Machine Learnin</h4>
+                <p class="card-text">description will be added</p>
+                <a href="OCR" class="btn btn-primary">Project Details</a>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+
+    
+
+{% endblock %}
