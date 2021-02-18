@@ -8,7 +8,7 @@ from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 import os
 import numpy as np
-import cv2
+# import cv2
 import matplotlib.pyplot as plt 
 import uvicorn
 # from OCR import prep, fullocr_single
@@ -69,7 +69,7 @@ def create_upload_files(files: List[UploadFile] = File(...)):
     '''
     image_bytes = files[0].file.read()
     #print(type(image_bytes))
-    image_decoded = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), -1)
+    # image_decoded = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), -1)
     
 
     #print(type(image_decoded))
