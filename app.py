@@ -8,7 +8,7 @@ from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 import os
 import numpy as np
-import cv2
+# import cv2
 import matplotlib.pyplot as plt 
 import uvicorn
 # from OCR import prep, fullocr_single
@@ -63,26 +63,26 @@ def start_page(request: Request):
 
     return templates.TemplateResponse("about.html", {"request": request})
 
-@app.post("/files/")
-def create_upload_files(files: List[UploadFile] = File(...)):
-    #print("entered")
-    #name = '/home/sheba/Documents/Web development with Fast API/' + files[0].filename
-    #print(name)
-    #print(files[0].content_type)
-    #print(len(files))
+# @app.post("/files/")
+# def create_upload_files(files: List[UploadFile] = File(...)):
+#     #print("entered")
+#     #name = '/home/sheba/Documents/Web development with Fast API/' + files[0].filename
+#     #print(name)
+#     #print(files[0].content_type)
+#     #print(len(files))
     
-    '''
-    with open(name, "wb+") as file_object:
-        file_object.write(files[0].file.read())
-    '''
-    image_bytes = files[0].file.read()
-    #print(type(image_bytes))
-    image_decoded = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), -1)
+#     '''
+#     with open(name, "wb+") as file_object:
+#         file_object.write(files[0].file.read())
+#     '''
+#     image_bytes = files[0].file.read()
+#     #print(type(image_bytes))
+#     image_decoded = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), -1)
     
 
-    #print(type(image_decoded))
-    #cv2.imwrite(name, image_decoded)
-    return {"info": "ok"}
+#     #print(type(image_decoded))
+#     #cv2.imwrite(name, image_decoded)
+#     return {"info": "ok"}
 
 # @app.post("/OCR_Result/")
 # def OCR_files(files: UploadFile = File(...), response_class=PlainTextResponse):
