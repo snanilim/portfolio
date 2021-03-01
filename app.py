@@ -8,7 +8,7 @@ from fastapi.responses import PlainTextResponse
 from pydantic import BaseModel
 import os
 import numpy as np
-# import cv2
+import cv2
 import matplotlib.pyplot as plt 
 import uvicorn
 # from OCR import prep, fullocr_single
@@ -40,17 +40,25 @@ def start_page(request: Request):
     print("start_page")
     return templates.TemplateResponse("index.html", {"request": request})
 
-@app.get("/home/FaceRecognition", response_class=HTMLResponse)
+@app.get("/project/face-recognition/view", response_class=HTMLResponse)
 def start_page(request: Request):
     print("start_page")
-    return templates.TemplateResponse("faceRecognition_Intro.html", {"request": request})
+    return templates.TemplateResponse("face_recognition_view.html", {"request": request})
+
+
+
+@app.get("/project/liveness-detection/view", response_class=HTMLResponse)
+def start_page(request: Request):
+    print("start_page")
+    return templates.TemplateResponse("liveness_ditection_view.html", {"request": request})
+
 
 @app.get("/home/OCR", response_class=HTMLResponse)
 def start_page(request: Request):
     print("start_page")
     return templates.TemplateResponse("OCR_Intro.html", {"request": request})
 
-@app.get("/About", response_class=HTMLResponse)
+@app.get("/about", response_class=HTMLResponse)
 def start_page(request: Request):
 
     return templates.TemplateResponse("about.html", {"request": request})
@@ -69,7 +77,7 @@ def create_upload_files(files: List[UploadFile] = File(...)):
     '''
     image_bytes = files[0].file.read()
     #print(type(image_bytes))
-    # image_decoded = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), -1)
+    image_decoded = cv2.imdecode(np.frombuffer(image_bytes, np.uint8), -1)
     
 
     #print(type(image_decoded))
